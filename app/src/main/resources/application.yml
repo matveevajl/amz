@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://${DB_CONTAINER_NAME}:5432/postgredb
+    username: postgreUser
+    password: postgreAdminDev
+  liquibase:
+    url: jdbc:postgresql://${DB_CONTAINER_NAME}:5432/postgredb
+    user: postgreUser
+    password: postgreAdminDev
+    change-log: "classpath:db/changelog/liquibase-changeLog.yaml"
+ip:
+  timeunit: SECONDS #TimeUnit.MILLISECONDS, TimeUnit.SECONDS, TimeUnit.MINUTES
+  timecount: 5
+  limit: 5

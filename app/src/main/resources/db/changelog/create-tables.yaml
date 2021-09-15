@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: "create-tables"
+      author: Julia
+      changes:
+        - createTable:
+            tableName: ips
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: ip
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: TIMESTAMP
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
