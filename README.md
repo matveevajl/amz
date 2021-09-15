@@ -14,6 +14,6 @@ docker-compose
 
 ## Tasks:
 
-**dev-interview-build** - build images
-**dev-interview-run** - run app
+**dev-interview-build** - build images  
+**dev-interview-run** - run app  
 **dev-interview-clean** - clean containers
